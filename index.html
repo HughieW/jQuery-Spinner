@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Spinner</title>
+	<link rel="stylesheet" href="css/jquery.spinner.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	<script src="js/jquery.spinner.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#spin-test').spinner({
+				min: 0,
+				max: 100,
+				value: 42,
+				animate: true,
+				speed: 1000,
+				backgroundStrokeWidth: 6,
+				backgroundStroke: '#274D84',
+				foreground: '#274D84',
+				background: '#4AA7E0',
+				center: '#4AA7E0'
+			});
+
+			$('#spin-another').spinner({
+				min: 0,
+				max: 100,
+				value: 15,
+				animate: true,
+				speed: 1000,
+				foreground: '#274D84',
+				background: '#4AA7E0',
+				border: 35
+			});
+
+			$('#spin-another2').spinner({
+				min: 0,
+				max: 100,
+				value: 31,
+				animate: true,
+				speed: 1000,
+				foreground: '#278429',
+				background: '#57E04A',
+				border: 35
+			});
+		});
+	</script>
+	<style>
+	.jquery-spinner .caption .inner {
+		display:block;
+		font-size:80px;
+		line-height:1em;
+		padding-top:30px;
+	}
+	</style>
+</head>
+<body>
+	<section class="main">
+		<span id="spin-test"></span>
+		<spin id="spin-another"></spin>
+		<spin id="spin-another2"></spin>
+	</section>
+</body>
+</html>
